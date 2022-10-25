@@ -12,10 +12,11 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink='/message' routerLinkActive='active'>Messages</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" (click)="Logout()" href="#" >Logout</a>
-              </li>
+             
           </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/erorrs' routerLinkActive='active'>Errors</a>
+          </li>
           </ul>
           <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user"  class="dropdown" dropdown>
             <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.userName | titlecase}} </a>
