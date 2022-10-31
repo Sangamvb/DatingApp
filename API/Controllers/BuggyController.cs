@@ -52,11 +52,5 @@ namespace API.Controllers
         {
             return BadRequest();
         }
-        private async Task<bool> UserExists(string username)
-        {
-            bool result=false;
-            result =await _context.Users.AnyAsync(x=>x.UserName.ToLower() == username.ToLower());
-            return result;
-        }
     }
 }
